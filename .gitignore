@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+*/data/2018/1-Year
+binary_fairness_ACSEmployment.pkl
+binary_fairness_ACS.pkl
+binary_fairness_Adult.pkl
+binary_fairness_Bank.pkl
+binary_fairness_COMPAS.pkl
+binary_fairness_German.pkl
+__pycache__
+dist
+fairlyuncertain.egg-info

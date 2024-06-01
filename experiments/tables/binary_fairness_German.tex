@@ -1,0 +1,16 @@
+\begin{tabular} {|l|c|c|c|c|}
+\hline
+\textbf{Algorithm} & \textbf{Error Rate} & \textbf{Statistical Parity} & \textbf{Equalized Odds} & \textbf{Included \%} \\ \hline
+Baseline & 0.263 (0.0257) & 0.0942 (0.0390) & 0.108 (0.0772) & \textbf{100.} (0.00) \\ \hline 
+Threshold Optimizer SP & 0.263 (0.0228) & \textbf{\underline{0.0604}} (0.0591) & 0.152 (0.0848) & \textbf{100.} (0.00) \\ \hline 
+Threshold Optimizer EO & 0.258 (0.021) & 0.132 (0.0622) & 0.141 (0.0539) & \textbf{100.} (0.00) \\ \hline 
+Exponentiated Gradient SP & 0.261 (0.025) & \textbf{0.0425} (0.0592) & 0.131 (0.0609) & \textbf{100.} (0.00) \\ \hline 
+Exponentiated Gradient EO & 0.258 (0.021) & 0.132 (0.0622) & 0.141 (0.0539) & \textbf{100.} (0.00) \\ \hline 
+Grid Search SP & 0.283 (0.0301) & 0.0758 (0.0486) & 0.173 (0.0956) & \textbf{100.} (0.00) \\ \hline 
+Grid Search EO & 0.273 (0.0298) & 0.101 (0.0649) & 0.100 (0.0753) & \textbf{100.} (0.00) \\ \hline 
+Random & 0.263 (0.0237) & 0.0717 (0.0413) & 0.0983 (0.0705) & 91.6 (7.94) \\ \hline 
+Ensemble & \textbf{\underline{0.224}} (0.0346) & 0.0757 (0.0621) & \textbf{\textit{0.0816}} (0.0592) & 85.2 (9.41) \\ \hline 
+Selective Ensemble & \textbf{0.218} (0.0296) & 0.0857 (0.0671) & 0.134 (0.104) & 88.7 (10.0) \\ \hline 
+Self-(in)consistency & 0.231 (0.0214) & 0.0714 (0.0491) & \textbf{\underline{0.0788}} (0.0636) & 92.1 (8.07) \\ \hline 
+Binomial NLL & \textbf{\underline{0.224}} (0.0386) & \textbf{\textit{0.0677}} (0.0332) & \textbf{0.0592} (0.052) & 86.2 (7.24) \\ \hline 
+\end{tabular}

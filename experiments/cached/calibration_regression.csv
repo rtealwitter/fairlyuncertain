@@ -1,0 +1,98 @@
+{'Ensemble': 84.0838206236319, 'Normal NLL': 0.5450889704254154, '$\\beta$-NLL': 0.4385140855607793, 'Faithful NLL': 0.37485889299498504, 'dataset': 'Communities'}
+{'Ensemble': 93.96554592524103, 'Normal NLL': 0.29639288086617954, '$\\beta$-NLL': 0.3496864578784772, 'Faithful NLL': 0.29370782638419796, 'dataset': 'Communities'}
+{'Ensemble': 93.32491457646711, 'Normal NLL': 0.22528726674709962, '$\\beta$-NLL': 0.22342317482609142, 'Faithful NLL': 0.20762448191597466, 'dataset': 'Communities'}
+{'Ensemble': 119.60301726850442, 'Normal NLL': 0.2960904428020065, '$\\beta$-NLL': 0.29009448799968235, 'Faithful NLL': 0.6839805614182185, 'dataset': 'Communities'}
+{'Ensemble': 110.2173026455218, 'Normal NLL': 0.3539268800128113, '$\\beta$-NLL': 0.29922021861528697, 'Faithful NLL': 0.3443750631766411, 'dataset': 'Communities'}
+{'Ensemble': 111.43293169155504, 'Normal NLL': 0.35357764747432674, '$\\beta$-NLL': 0.30429582140488337, 'Faithful NLL': 0.3625540725713607, 'dataset': 'Communities'}
+{'Ensemble': 102.04321440187248, 'Normal NLL': 0.32604575080073656, '$\\beta$-NLL': 0.21778012585888398, 'Faithful NLL': 0.2110582047278471, 'dataset': 'Communities'}
+{'Ensemble': 105.16088525568799, 'Normal NLL': 0.45416298077254225, '$\\beta$-NLL': 0.5010373146454784, 'Faithful NLL': 0.45721208892973986, 'dataset': 'Communities'}
+{'Ensemble': 2.0671649725009353, 'Normal NLL': -0.6303493677074479, '$\\beta$-NLL': -0.5868116946167028, 'Faithful NLL': -0.5897862843426324, 'dataset': 'IHDP'}
+{'Ensemble': 3.6629558180123944, 'Normal NLL': -0.5963370521184104, '$\\beta$-NLL': -0.6414485567385899, 'Faithful NLL': -0.5652400978983305, 'dataset': 'IHDP'}
+{'Ensemble': 5.688406550658056, 'Normal NLL': -0.5891626935629258, '$\\beta$-NLL': -0.5825504680651229, 'Faithful NLL': -0.5584343169036577, 'dataset': 'IHDP'}
+{'Ensemble': 3.9291037878006834, 'Normal NLL': -0.6479018763892984, '$\\beta$-NLL': -0.5976201685339252, 'Faithful NLL': -0.5592234350216235, 'dataset': 'IHDP'}
+{'Ensemble': 2.257070919396261, 'Normal NLL': -0.6055437800975983, '$\\beta$-NLL': -0.6148682951625274, 'Faithful NLL': -0.5680641890113207, 'dataset': 'IHDP'}
+{'Ensemble': 4.507679120282819, 'Normal NLL': -0.5922676742082441, '$\\beta$-NLL': -0.5734241638699629, 'Faithful NLL': -0.5937434617499388, 'dataset': 'IHDP'}
+{'Ensemble': 3.32456666040611, 'Normal NLL': -0.6136682235948127, '$\\beta$-NLL': -0.5782521663540198, 'Faithful NLL': -0.5894352805184144, 'dataset': 'IHDP'}
+{'Ensemble': 5.7067859186636705, 'Normal NLL': -0.6257582725851967, '$\\beta$-NLL': -0.6330285851438759, 'Faithful NLL': -0.6044041519188249, 'dataset': 'IHDP'}
+{'Ensemble': 5.121029367364537, 'Normal NLL': -0.5963919457999105, '$\\beta$-NLL': -0.6107576278881705, 'Faithful NLL': -0.594486217086354, 'dataset': 'IHDP'}
+{'Ensemble': 4.353977210400009, 'Normal NLL': -0.5931801536989932, '$\\beta$-NLL': -0.5855898602090251, 'Faithful NLL': -0.5811886569678942, 'dataset': 'IHDP'}
+{'Ensemble': 17.26809068138233, 'Normal NLL': -0.718612939458691, '$\\beta$-NLL': -0.6659611028228659, 'Faithful NLL': -0.6608889265013591, 'dataset': 'Insurance'}
+{'Ensemble': 8.88053690537114, 'Normal NLL': -0.6011446441417126, '$\\beta$-NLL': -0.6351725587998364, 'Faithful NLL': -0.6238699645034628, 'dataset': 'Insurance'}
+{'Ensemble': 16.43791193443316, 'Normal NLL': -0.6384764882792393, '$\\beta$-NLL': -0.5948033823319188, 'Faithful NLL': -0.590452546740147, 'dataset': 'Insurance'}
+{'Ensemble': 25.222608788123246, 'Normal NLL': -0.6691972097726719, '$\\beta$-NLL': -0.6276423349509032, 'Faithful NLL': -0.6361682226084776, 'dataset': 'Insurance'}
+{'Ensemble': 7.5149304034956055, 'Normal NLL': -0.616769671231979, '$\\beta$-NLL': -0.6246999633491757, 'Faithful NLL': -0.5793796131915608, 'dataset': 'Insurance'}
+{'Ensemble': 79.0432313181655, 'Normal NLL': -0.6658998686391512, '$\\beta$-NLL': -0.6577444947066119, 'Faithful NLL': -0.6410773408622815, 'dataset': 'Insurance'}
+{'Ensemble': 21.30027507672288, 'Normal NLL': -0.6669478276683192, '$\\beta$-NLL': -0.6258209213299687, 'Faithful NLL': -0.6239437540478194, 'dataset': 'Insurance'}
+{'Ensemble': 27.199698394522432, 'Normal NLL': -0.691107798264201, '$\\beta$-NLL': -0.6703750680907602, 'Faithful NLL': -0.6601231157329887, 'dataset': 'Insurance'}
+{'Ensemble': 30.95216997226247, 'Normal NLL': -0.7280379238817739, '$\\beta$-NLL': -0.6948131111498096, 'Faithful NLL': -0.6834259099346144, 'dataset': 'Insurance'}
+{'Ensemble': 21.292776538705596, 'Normal NLL': -0.6277674479885104, '$\\beta$-NLL': -0.6335504253548626, 'Faithful NLL': -0.6468475040126103, 'dataset': 'Insurance'}
+{'Ensemble': 218.63243955024222, 'Normal NLL': -0.25556470306277373, '$\\beta$-NLL': -0.2548276561178632, 'Faithful NLL': -0.25513047555171003, 'dataset': 'Law School'}
+{'Ensemble': 191.04005981298914, 'Normal NLL': -0.25499396133466695, '$\\beta$-NLL': -0.25409558050901465, 'Faithful NLL': -0.2547520828200997, 'dataset': 'Law School'}
+{'Ensemble': 173.29455561199217, 'Normal NLL': -0.25650349819590335, '$\\beta$-NLL': -0.2552506006900032, 'Faithful NLL': -0.2558075431610035, 'dataset': 'Law School'}
+{'Ensemble': 185.91478957881995, 'Normal NLL': -0.25577779322872474, '$\\beta$-NLL': -0.2563128857299739, 'Faithful NLL': -0.2564669982023606, 'dataset': 'Law School'}
+{'Ensemble': 216.5925139574828, 'Normal NLL': -0.2562215581227891, '$\\beta$-NLL': -0.2561393224079222, 'Faithful NLL': -0.2567232946568945, 'dataset': 'Law School'}
+{'Ensemble': 195.1649838038355, 'Normal NLL': -0.25395514539707337, '$\\beta$-NLL': -0.2549624019369178, 'Faithful NLL': -0.25496881378951175, 'dataset': 'Law School'}
+{'Ensemble': 197.54735045216822, 'Normal NLL': -0.25437294927719434, '$\\beta$-NLL': -0.2537506195869173, 'Faithful NLL': -0.2529329690384343, 'dataset': 'Law School'}
+{'Ensemble': 189.12874614169854, 'Normal NLL': -0.2553510608570885, '$\\beta$-NLL': -0.25488186183155603, 'Faithful NLL': -0.2549002366906042, 'dataset': 'Law School'}
+{'Ensemble': 217.18013786205833, 'Normal NLL': -0.25280169819107495, '$\\beta$-NLL': -0.25332098382969925, 'Faithful NLL': -0.2530255950806206, 'dataset': 'Law School'}
+{'Ensemble': 260.20381826169483, 'Normal NLL': -0.25463316208966974, '$\\beta$-NLL': -0.2545556278603289, 'Faithful NLL': -0.2553613297864719, 'dataset': 'Law School'}
+{'Ensemble': 168.20357972032696, 'Normal NLL': 0.4142717410070816, '$\\beta$-NLL': 0.4145527409455417, 'Faithful NLL': 0.4144405159928391, 'dataset': 'Twins'}
+{'Ensemble': 161.8317936254553, 'Normal NLL': 0.4117345742565331, '$\\beta$-NLL': 0.41239513114951803, 'Faithful NLL': 0.4123433650104756, 'dataset': 'Twins'}
+{'Ensemble': 166.97921126030036, 'Normal NLL': 0.41482779354144633, '$\\beta$-NLL': 0.41461285937417147, 'Faithful NLL': 0.4132154671580244, 'dataset': 'Twins'}
+{'Ensemble': 163.95520417897143, 'Normal NLL': 0.41322890968393755, '$\\beta$-NLL': 0.4134582569034071, 'Faithful NLL': 0.4128618403336394, 'dataset': 'Twins'}
+{'Ensemble': 169.394880792471, 'Normal NLL': 0.41383995431841886, '$\\beta$-NLL': 0.41407859752286624, 'Faithful NLL': 0.41367998219172347, 'dataset': 'Twins'}
+{'Ensemble': 163.29248432842024, 'Normal NLL': 0.41404984194700895, '$\\beta$-NLL': 0.41393985229189934, 'Faithful NLL': 0.41308669795497727, 'dataset': 'Twins'}
+{'Ensemble': 153.86682507341365, 'Normal NLL': 0.41099384028668673, '$\\beta$-NLL': 0.4121383938321196, 'Faithful NLL': 0.41119851836157667, 'dataset': 'Twins'}
+{'Ensemble': 159.50915660585812, 'Normal NLL': 0.41337359449107597, '$\\beta$-NLL': 0.4140990947143181, 'Faithful NLL': 0.4134191976933968, 'dataset': 'Twins'}
+{'Ensemble': 139.65664031426658, 'Normal NLL': 0.40968200714635844, '$\\beta$-NLL': 0.40983616386432986, 'Faithful NLL': 0.4103096655431159, 'dataset': 'Twins'}
+{'Ensemble': 164.1432596839078, 'Normal NLL': 0.41173480948906327, '$\\beta$-NLL': 0.41266602467833485, 'Faithful NLL': 0.4125438743616559, 'dataset': 'Twins'}
+{'Ensemble': 122.01962075276984, 'Normal NLL': 0.3204047026901798, '$\\beta$-NLL': 0.32568831587493374, 'Faithful NLL': 0.2504762371621066, 'dataset': 'Communities'}
+{'Ensemble': 137.0222425002075, 'Normal NLL': 0.38596537660541275, '$\\beta$-NLL': 0.4956608699991725, 'Faithful NLL': 0.380827924018276, 'dataset': 'Communities'}
+{'Ensemble': 150.87277403412813, 'Normal NLL': 0.4032117871697757, '$\\beta$-NLL': 0.41327731912829363, 'Faithful NLL': 0.35665770892357596, 'dataset': 'Communities'}
+{'Ensemble': 116.7852073245765, 'Normal NLL': 0.3850474865555208, '$\\beta$-NLL': 0.35709075442659993, 'Faithful NLL': 0.3207085059316579, 'dataset': 'Communities'}
+{'Ensemble': 134.5617422384802, 'Normal NLL': 0.3202768866977105, '$\\beta$-NLL': 0.31448498179342493, 'Faithful NLL': 0.30144576092252323, 'dataset': 'Communities'}
+{'Ensemble': 87.78974292435156, 'Normal NLL': 0.26017334171690676, '$\\beta$-NLL': 0.2874510679732203, 'Faithful NLL': 0.2675108484318208, 'dataset': 'Communities'}
+{'Ensemble': 93.84191698313407, 'Normal NLL': 0.25384575136343884, '$\\beta$-NLL': 0.26595529772718457, 'Faithful NLL': 0.23530076076339357, 'dataset': 'Communities'}
+{'Ensemble': 143.49160207464894, 'Normal NLL': 0.3056068759681884, '$\\beta$-NLL': 0.32010635770153795, 'Faithful NLL': 0.27504079629051537, 'dataset': 'Communities'}
+{'Ensemble': 150.7333279708534, 'Normal NLL': 0.5005367760401842, '$\\beta$-NLL': 0.43643900512147843, 'Faithful NLL': 0.4108185212228457, 'dataset': 'Communities'}
+{'Ensemble': 124.7860941561733, 'Normal NLL': 0.3687072496537028, '$\\beta$-NLL': 0.32340992208450187, 'Faithful NLL': 0.3929705424482988, 'dataset': 'Communities'}
+{'Ensemble': 5.54788002712395, 'Normal NLL': -0.6514449076472876, '$\\beta$-NLL': -0.5931575900627674, 'Faithful NLL': -0.5875710799495938, 'dataset': 'IHDP'}
+{'Ensemble': 4.349543369010538, 'Normal NLL': -0.622149476138615, '$\\beta$-NLL': -0.6019231048572729, 'Faithful NLL': -0.5752085067263016, 'dataset': 'IHDP'}
+{'Ensemble': 2.9221918592248137, 'Normal NLL': -0.3602925532507415, '$\\beta$-NLL': -0.5693869910810533, 'Faithful NLL': -0.5835168555581, 'dataset': 'IHDP'}
+{'Ensemble': 3.1156052187916545, 'Normal NLL': -0.6200793477888472, '$\\beta$-NLL': -0.5904783603884765, 'Faithful NLL': -0.5735139003694346, 'dataset': 'IHDP'}
+{'Ensemble': 1.9374262054895546, 'Normal NLL': -0.6195679110462199, '$\\beta$-NLL': -0.6143124283876926, 'Faithful NLL': -0.6027376887839276, 'dataset': 'IHDP'}
+{'Ensemble': 2.5983115655000932, 'Normal NLL': -0.6665114446882473, '$\\beta$-NLL': -0.6020480765260319, 'Faithful NLL': -0.5487960117526068, 'dataset': 'IHDP'}
+{'Ensemble': 2.6748925648524233, 'Normal NLL': -0.6187723337285999, '$\\beta$-NLL': -0.6279896422350434, 'Faithful NLL': -0.5844963921159196, 'dataset': 'IHDP'}
+{'Ensemble': 5.046731127957221, 'Normal NLL': -0.6202474927678251, '$\\beta$-NLL': -0.6041921718011237, 'Faithful NLL': -0.5871359171969378, 'dataset': 'IHDP'}
+{'Ensemble': 3.6337814083438063, 'Normal NLL': -0.45185264071362363, '$\\beta$-NLL': -0.5793500094160344, 'Faithful NLL': -0.5816770494769408, 'dataset': 'IHDP'}
+{'Ensemble': 6.240433283578978, 'Normal NLL': -0.6430541459674927, '$\\beta$-NLL': -0.5986164592548895, 'Faithful NLL': -0.5852950070971183, 'dataset': 'IHDP'}
+{'Ensemble': 24.64824655900378, 'Normal NLL': -0.6536626922335516, '$\\beta$-NLL': -0.6132843443797271, 'Faithful NLL': -0.5730917626736556, 'dataset': 'Insurance'}
+{'Ensemble': 5.4168351580632965, 'Normal NLL': -0.7052831864238852, '$\\beta$-NLL': -0.6823256232866698, 'Faithful NLL': -0.6590916944910452, 'dataset': 'Insurance'}
+{'Ensemble': 24.147963669768725, 'Normal NLL': -0.7120183548072738, '$\\beta$-NLL': -0.6597899092480913, 'Faithful NLL': -0.6850299996112255, 'dataset': 'Insurance'}
+{'Ensemble': 20.33568025098363, 'Normal NLL': -0.7017707534531351, '$\\beta$-NLL': -0.5982304424798883, 'Faithful NLL': -0.641136920498961, 'dataset': 'Insurance'}
+{'Ensemble': 10.604618060864178, 'Normal NLL': -0.7023052279750919, '$\\beta$-NLL': -0.6661872419128329, 'Faithful NLL': -0.655653313123652, 'dataset': 'Insurance'}
+{'Ensemble': 17.598977323839776, 'Normal NLL': -0.6569123010715786, '$\\beta$-NLL': -0.6456888675763774, 'Faithful NLL': -0.6370762598595324, 'dataset': 'Insurance'}
+{'Ensemble': 15.090421121645173, 'Normal NLL': -0.7006431964231583, '$\\beta$-NLL': -0.6712567096841731, 'Faithful NLL': -0.647362879727674, 'dataset': 'Insurance'}
+{'Ensemble': 12.54508236465027, 'Normal NLL': -0.6767556947898536, '$\\beta$-NLL': -0.6549111994121043, 'Faithful NLL': -0.6538096366886654, 'dataset': 'Insurance'}
+{'Ensemble': 10.320318695179441, 'Normal NLL': -0.7245379360218327, '$\\beta$-NLL': -0.6668111753859169, 'Faithful NLL': -0.6553636119955957, 'dataset': 'Insurance'}
+{'Ensemble': 18.786529833285357, 'Normal NLL': -0.6056859251664086, '$\\beta$-NLL': -0.6499246538172819, 'Faithful NLL': -0.6348585075563458, 'dataset': 'Insurance'}
+{'Ensemble': 180.89231379096, 'Normal NLL': -0.2559811146988035, '$\\beta$-NLL': -0.2546232615057017, 'Faithful NLL': -0.25569337601891995, 'dataset': 'Law School'}
+{'Ensemble': 193.68247150746342, 'Normal NLL': -0.25495179311730015, '$\\beta$-NLL': -0.2542962066422365, 'Faithful NLL': -0.2535914743911162, 'dataset': 'Law School'}
+{'Ensemble': 203.1213066179036, 'Normal NLL': -0.2548493126620337, '$\\beta$-NLL': -0.2543377345210451, 'Faithful NLL': -0.25363517102640276, 'dataset': 'Law School'}
+{'Ensemble': 230.7493295088419, 'Normal NLL': -0.2558115258673981, '$\\beta$-NLL': -0.2552352330511082, 'Faithful NLL': -0.255413666903135, 'dataset': 'Law School'}
+{'Ensemble': 200.9699484546835, 'Normal NLL': -0.25443992475475335, '$\\beta$-NLL': -0.25442651428850677, 'Faithful NLL': -0.25419908023107096, 'dataset': 'Law School'}
+{'Ensemble': 178.5918337949059, 'Normal NLL': -0.254691826327174, '$\\beta$-NLL': -0.25397748538791454, 'Faithful NLL': -0.25428299707466256, 'dataset': 'Law School'}
+{'Ensemble': 204.11620120871657, 'Normal NLL': -0.2542528069667388, '$\\beta$-NLL': -0.2532239603063524, 'Faithful NLL': -0.2543940185544663, 'dataset': 'Law School'}
+{'Ensemble': 210.1752271025854, 'Normal NLL': -0.2546551483696062, '$\\beta$-NLL': -0.2548162448926366, 'Faithful NLL': -0.2545138033134695, 'dataset': 'Law School'}
+{'Ensemble': 203.50365432612807, 'Normal NLL': -0.2552424517037287, '$\\beta$-NLL': -0.25475285264489494, 'Faithful NLL': -0.2541954245531386, 'dataset': 'Law School'}
+{'Ensemble': 241.82483672107682, 'Normal NLL': -0.25490374762894685, '$\\beta$-NLL': -0.25396685185744805, 'Faithful NLL': -0.25391031156243754, 'dataset': 'Law School'}
+{'Ensemble': 153.07671947281946, 'Normal NLL': 0.41506684276242867, '$\\beta$-NLL': 0.41536138174939546, 'Faithful NLL': 0.4147325132188089, 'dataset': 'Twins'}
+{'Ensemble': 162.10740597880948, 'Normal NLL': 0.4142057402106083, '$\\beta$-NLL': 0.41446241739814954, 'Faithful NLL': 0.41478761807672715, 'dataset': 'Twins'}
+{'Ensemble': 158.07882835250822, 'Normal NLL': 0.4091750096618638, '$\\beta$-NLL': 0.41017457166160204, 'Faithful NLL': 0.4101578497324409, 'dataset': 'Twins'}
+{'Ensemble': 177.43578031888808, 'Normal NLL': 0.41485412510714686, '$\\beta$-NLL': 0.4148540639727732, 'Faithful NLL': 0.41445633084174016, 'dataset': 'Twins'}
+{'Ensemble': 158.34418952694105, 'Normal NLL': 0.41133233091895655, '$\\beta$-NLL': 0.41223855072410626, 'Faithful NLL': 0.41242505903218313, 'dataset': 'Twins'}
+{'Ensemble': 155.95149016783108, 'Normal NLL': 0.4137298809766062, '$\\beta$-NLL': 0.41360635726497735, 'Faithful NLL': 0.41325596111661556, 'dataset': 'Twins'}
+{'Ensemble': 170.02684968886877, 'Normal NLL': 0.41372128564266175, '$\\beta$-NLL': 0.41351762778028417, 'Faithful NLL': 0.41367257115473105, 'dataset': 'Twins'}
+{'Ensemble': 159.98598785553875, 'Normal NLL': 0.41526450439465973, '$\\beta$-NLL': 0.4153869384092874, 'Faithful NLL': 0.4155306007217833, 'dataset': 'Twins'}
+{'Ensemble': 144.1122116462423, 'Normal NLL': 0.414446009908977, '$\\beta$-NLL': 0.4148210680506361, 'Faithful NLL': 0.4148818770980209, 'dataset': 'Twins'}
+{'Ensemble': 142.6087402445553, 'Normal NLL': 0.40850418149847345, '$\\beta$-NLL': 0.408444410614067, 'Faithful NLL': 0.408208687304469, 'dataset': 'Twins'}

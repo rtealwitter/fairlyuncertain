@@ -1,0 +1,17 @@
+numpy
+torch
+matplotlib
+tqdm
+pandas
+aif360
+scikit-learn
+pyro-ppl
+scipy
+seaborn
+xgboost
+tabulate
+ucimlrepo
+certifi
+fairlearn
+folktables
+requests
