@@ -1,9 +1,9 @@
 import numpy as np
-from ucimlrepo import fetch_ucirepo 
 
 def get_communities_and_crimes():
     instance = {}
     # fetch dataset 
+    from ucimlrepo import fetch_ucirepo 
     dataset = fetch_ucirepo(id=183) 
 
     dataset.data.features = dataset.data.features.replace('?', np.nan)

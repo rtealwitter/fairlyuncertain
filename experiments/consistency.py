@@ -20,7 +20,7 @@ for is_binary in [True, False]:
     for dataset in tqdm(datasets):
         results[dataset] = fu.get_consistency_data(dataset, algorithms, max_depths)
     
-    #fu.plot_consistency(results, is_binary, algorithms, datasets)
+    fu.plot_consistency(results, is_binary, algorithms, datasets, folder='figures')
 
     table = fu.get_consistency_table(results, datasets, algorithms)
     filename = 'tables/consistency_' + type + '.tex'

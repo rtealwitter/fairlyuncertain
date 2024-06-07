@@ -7,4 +7,4 @@ for is_binary in [True, False]:
     algorithms = {algo_name: fu.algorithms[algo_name] for algo_name in algorithm_names}
 
     results = fu.get_calibration_plot_data(algorithms=algorithms, datasets=datasets)
-    fu.plot_calibration(results=results, is_binary=is_binary, algorithms = algorithms, datasets=datasets)
+    fu.plot_calibration(results=results, is_binary=is_binary, algorithms = algorithms, datasets=datasets, folder='figures')

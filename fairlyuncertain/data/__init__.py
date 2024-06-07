@@ -26,7 +26,7 @@ dataloaders = {
 
 def cache_dataset(name):
     print(f'Caching {name} dataset...')
-    url = f'https://raw.githubusercontent.com/rtealwitter/naturalexperiments/main/fairlyuncertain/data/cached/{name}.pkl'
+    url = f'https://raw.githubusercontent.com/rtealwitter/fairlyuncertain/main/fairlyuncertain/data/cached/{name}.pkl'
     filename = __file__.replace('__init__.py', f'cached/{name}.pkl')
     r = requests.get(url, timeout=10)
     if r.status_code == 200:

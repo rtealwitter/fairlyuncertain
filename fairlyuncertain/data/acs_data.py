@@ -1,5 +1,3 @@
-from folktables import ACSDataSource, ACSEmployment, ACSIncome, ACSPublicCoverage
-
 import pandas as pd
 import numpy as np
 
@@ -106,22 +104,7 @@ def get_categorical_features(scenario, data_types):
             categorical_features.append(feature)
     return categorical_features
 
-ACS_Scenarios = {
-    "ACSEmployment": {'loader': ACSEmployment, 
-                      'categorical_features' : get_categorical_features(ACSEmployment, data_types),
-                      'sensitive_features': [1, 2]
-                      },
-    "ACSIncome": {'loader': ACSIncome, 
-                      'categorical_features' : get_categorical_features(ACSIncome, data_types),
-                      'sensitive_features': [1, 2]
-                 },
-    "ACSPublicCoverage": {'loader': ACSPublicCoverage, 
-                          'categorical_features' : get_categorical_features(ACSPublicCoverage, data_types),
-                          'sensitive_features': [1, 2]
-                         }
-}
-
-def return_acs_data_scenario(acs_data, scenario="ACSEmployment", verbose=False):
+def return_acs_data_scenario(acs_data, scenario, ACS_Scenarios, verbose=False):
     scenario = ACS_Scenarios[scenario]['loader']
     features, label, group = scenario.df_to_numpy(acs_data)
     if verbose:
@@ -137,9 +120,25 @@ def return_acs_data_scenario(acs_data, scenario="ACSEmployment", verbose=False):
     return df, features, target, group
 
 def get_acs(name, states=['NY']):
+    from folktables import ACSDataSource, ACSEmployment, ACSIncome, ACSPublicCoverage
+    ACS_Scenarios = {
+        "ACSEmployment": {'loader': ACSEmployment, 
+                        'categorical_features' : get_categorical_features(ACSEmployment, data_types),
+                        'sensitive_features': [1, 2]
+                        },
+        "ACSIncome": {'loader': ACSIncome, 
+                        'categorical_features' : get_categorical_features(ACSIncome, data_types),
+                        'sensitive_features': [1, 2]
+                    },
+        "ACSPublicCoverage": {'loader': ACSPublicCoverage, 
+                            'categorical_features' : get_categorical_features(ACSPublicCoverage, data_types),
+                            'sensitive_features': [1, 2]
+                            }
+    }
+    assert name in ACS_Scenarios.keys(), f"Scenario {name} not one of {ACS_Scenarios.keys()}."
     data_source = ACSDataSource(survey_year='2018', horizon='1-Year', survey='person')
     acs_data = data_source.get_data(states=states, download=True)
-    _, features, target, group = return_acs_data_scenario(acs_data, scenario=name)
+    _, features, target, group = return_acs_data_scenario(acs_data, scenario=name, ACS_Scenarios=ACS_Scenarios)
 
     # label_name = target.columns
     protected_attribute_name = group.columns

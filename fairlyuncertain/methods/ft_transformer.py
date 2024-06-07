@@ -11,7 +11,6 @@ from sklearn.model_selection import RandomizedSearchCV, train_test_split
 from sklearn.base import BaseEstimator
 from sklearn.metrics import accuracy_score
 
-from tab_transformer_pytorch import FTTransformer
 import os
 
 class FTTransformerModel(BaseEstimator):
@@ -66,6 +65,7 @@ class FTTransformerModel(BaseEstimator):
         ).to(self.device)
 
     def build_model(self, categories, num_continuous, dim, dim_out, depth, heads, attn_dropout, ff_dropout):
+        from tab_transformer_pytorch import FTTransformer
         model = FTTransformer(
             categories = categories,
             num_continuous = num_continuous,

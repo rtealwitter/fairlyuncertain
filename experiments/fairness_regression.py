@@ -1,6 +1,7 @@
 import fairlyuncertain as fu
 import pickle
 from tqdm import tqdm
+import os
 
 
 # Algorithms
@@ -23,7 +24,7 @@ results = pickle.load(open(filename, 'rb'))
 
 plot_algorithms = ['True', 'Baseline', 'Normal NLL']
 
-fu.plot_regression_fairness(results, fu.regression_datasets, plot_algorithms)
+fu.plot_regression_fairness(results, fu.regression_datasets, plot_algorithms, folder='figures')
 
 # # # TABLE # # #
 

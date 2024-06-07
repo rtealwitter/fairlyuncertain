@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="fairlyuncertain",
-    version="0.0.2",
+    version="0.0.4",
     author="R. Teal Witter and Lucas Rosenblatt",
     author_email="rtealwitter@gmail.com, lr2872@nyu.edu",
     description="Heteroscedastic uncertainty estimates for fair algorithms.",
@@ -19,4 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    install_requires=[
+        'numpy', 'torch', 'matplotlib', 'tqdm', 'pandas', 'aif360', 'scikit-learn', 'scipy', 'xgboost', 'ucimlrepo', 'fairlearn', 'folktables', 'requests', 'tab_transformer_pytorch', 'tabulate'
+    ]
 )

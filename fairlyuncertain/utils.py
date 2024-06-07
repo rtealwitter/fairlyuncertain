@@ -1,61 +1,78 @@
 import scipy
 import numpy as np
 import warnings
+import sys
 
 # # # FORMATTING # # #
 
 def fancy_round(x, precision=3):
     return float(np.format_float_positional(x, precision=precision, unique=False, fractional=False, trim='k'))
 
-def print_table(results_all, filename, include_var=True, lower_is_better=True):
-    with open(filename, 'w') as f:
-        col_types = 'l' + 'c' * len(results_all.keys())
+def print_table(results_all, filename=None, include_var=True, lower_is_better=True, output_latex=True):
+    col_types = 'l' + 'c' * len(results_all.keys())
+    col_names = ['Approach'] + list(results_all.keys())
+    col_names_bold = ['\\textbf{' + col_name + '}' for col_name in col_names]
 
+    table = []
+
+    f = sys.stdout if filename is None else open(filename, 'w')
+    if output_latex:
         f.write('\\begin{tabular} {' + col_types + '}\n')
         f.write('\\toprule\n')
-
-        col_names = ['Approach'] + list(results_all.keys())
-        col_names_bold = ['\\textbf{' + col_name + '}' for col_name in col_names]
-
         f.write(' & '.join(col_names_bold) + ' \\\\ \\midrule\n')
+    else:
+        table.append(col_names)
 
-        current_round = lambda x: round(fancy_round(x, 3), 3)
-        
-        mean_cols = {}
+    current_round = lambda x: round(fancy_round(x, 3), 3)
+    
+    mean_cols = {}
+    for dataset in results_all:
+        mean_col = []
+        for algo_name in results_all[dataset]:
+            mean_col.append(current_round(np.mean(results_all[dataset][algo_name])))
+        if 'Included' in dataset:
+            lower_is_better = not lower_is_better
+        mean_col_sorted = sorted(mean_col, reverse=not lower_is_better)
+        mean_cols[dataset] = mean_col_sorted
+
+    first_key = list(results_all.keys())[0]
+
+    for algo_name in results_all[first_key]:
+        to_print = [algo_name]
         for dataset in results_all:
-            mean_col = []
-            for algo_name in results_all[dataset]:
-                mean_col.append(current_round(np.mean(results_all[dataset][algo_name])))
-            if 'Included' in dataset:
-                lower_is_better = not lower_is_better
-            mean_col_sorted = sorted(mean_col, reverse=not lower_is_better)
-            mean_cols[dataset] = mean_col_sorted
-
-        first_key = list(results_all.keys())[0]
-
-        for algo_name in results_all[first_key]:
-            to_print = [algo_name]
-            for dataset in results_all:
-                mean_val = current_round(np.mean(results_all[dataset][algo_name]))
-                std_val = current_round(np.std(results_all[dataset][algo_name]))
-                color = ''
-                if mean_val == mean_cols[dataset][0]:
-                    color = '\\cellcolor{gold!30}'
-                elif mean_val == mean_cols[dataset][1]:
-                    color = '\\cellcolor{silver!30}'
-                elif mean_val == mean_cols[dataset][2]:
-                    color = '\\cellcolor{bronze!30}'              
+            mean_val = current_round(np.mean(results_all[dataset][algo_name]))
+            std_val = current_round(np.std(results_all[dataset][algo_name]))
+            color = ''
+            if mean_val == mean_cols[dataset][0]:
+                color = '\\cellcolor{gold!30}'
+            elif mean_val == mean_cols[dataset][1]:
+                color = '\\cellcolor{silver!30}'
+            elif mean_val == mean_cols[dataset][2]:
+                color = '\\cellcolor{bronze!30}'              
+            if output_latex:
                 mean_val_str = f'{color}{mean_val}'
                 
                 if include_var:
                     to_print.append(f'{mean_val_str} $\\pm$ {std_val}')
                 else:
                     to_print.append(mean_val_str)
-
+            else:
+                if include_var:
+                    to_print.append(f'{mean_val} +/- {std_val}')
+                else:
+                    to_print.append(mean_val)
+        if output_latex:
             f.write(' & '.join(to_print) + ' \\\\ \n')
+        else:
+            table.append(to_print)
 
+    if output_latex:
         f.write('\\bottomrule\n')
         f.write('\\end{tabular}\n')
+        f.close()
+    else:
+        from tabulate import tabulate
+        print(tabulate(table, headers='firstrow', tablefmt='md'))
 
 def get_consistency_table(results, datasets, algorithms):
     table = {}

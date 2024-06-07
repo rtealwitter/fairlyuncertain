@@ -26,6 +26,9 @@ def load_calibration_results(filename, algorithms, datasets):
 
 def get_calibration_table_data(is_binary, algorithms, datasets, num_runs=10, folder=None):
     if folder is not None:
+        # Make folder if it does not exist
+        if not os.path.exists(folder):
+            os.makedirs(folder)
         type = 'binary' if is_binary else 'regression'
         filename = folder + f'/calibration_{type}.csv'
         if os.path.exists(filename):
@@ -89,7 +92,7 @@ def get_consistency_data(dataset, algorithms, max_depths):
 
 def compute_binary_fairness(results, algorithms, metrics): 
     metric_values = {metric : {algo_name : [] for algo_name in algorithms} for metric in metrics}
-    metric_values['Included \%'] = {algo_name : [] for algo_name in algorithms}
+    metric_values[r'Included \%'] = {algo_name : [] for algo_name in algorithms}
 
     for num_run in results:
         instance = results[num_run]['instance']
@@ -106,7 +109,7 @@ def compute_binary_fairness(results, algorithms, metrics):
                 for metric in metrics:
                     val = metrics[metric](pred, y, group, run_checks=False)
                     metric_values[metric][algo_name].append(val)
-                metric_values['Included \%'][algo_name].append(100)
+                metric_values[r'Included \%'][algo_name].append(100)
                 continue
             # Abstaining at best percentile for SP
             percentiles = np.arange(75, 101, 1)
@@ -126,6 +129,6 @@ def compute_binary_fairness(results, algorithms, metrics):
             for metric in metrics:
                 metric_val = metrics[metric](pred[include], y[include], group[include], run_checks=False)
                 metric_values[metric][algo_name].append(metric_val)
-            metric_values['Included \%'][algo_name].append(int(100 * include.mean()))
+            metric_values[r'Included \%'][algo_name].append(int(100 * include.mean()))
 
     return metric_values

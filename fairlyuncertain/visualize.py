@@ -9,8 +9,9 @@ linestyles = ['-', '--', '-.', ':', (0, (3, 5, 1, 5)), (1, (3, 5, 1, 5)), (2, (3
 
 # # # CALIBRATION # # #
 
-def plot_calibration(results, is_binary, algorithms, datasets, folder='figures'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
+def plot_calibration(results, is_binary, algorithms, datasets, folder=None):
+    num_datasets = len(datasets)
+    fig, axs = plt.subplots(1, num_datasets, figsize=(4 * num_datasets, 3))
 
     markers = ['o', 's', 'v', 'D', 'P', 'X', 'H']
 
@@ -51,15 +52,18 @@ def plot_calibration(results, is_binary, algorithms, datasets, folder='figures')
     plt.legend(fancybox=True, bbox_to_anchor=bbox_to_anchor, ncol=4)
 
     type = 'binary' if is_binary else 'regression'
-    filename = folder + '/calibration_' + type + '.pdf'
-    plt.savefig(filename, dpi=1000, bbox_inches="tight")
-    #plt.show()
-    plt.clf()
+    if folder is None:
+        plt.show()
+    else:
+        filename = folder + '/calibration_' + type + '.pdf'
+        plt.savefig(filename, dpi=1000, bbox_inches="tight")
+        plt.clf()
 
 # # # CONSISTENCY # # #
 
-def plot_consistency(results, is_binary, algorithms, datasets, folder='figures', idx=42):
-    fig, axs = plt.subplots(1, 5, figsize=(20, 3))    
+def plot_consistency(results, is_binary, algorithms, datasets, folder=None, idx=42):
+    num_datasets = len(datasets)
+    fig, axs = plt.subplots(1, num_datasets, figsize=(4 * num_datasets, 3))
 
     for i, dataset in enumerate(datasets):
         max_depths = sorted(results[dataset][list(algorithms.keys())[0]].keys())
@@ -74,15 +78,18 @@ def plot_consistency(results, is_binary, algorithms, datasets, folder='figures',
 
     plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=4)
     type = 'binary' if is_binary else 'regression'
-    filename = folder + '/consistency_' + type + '.pdf'
-    plt.savefig(filename, dpi=1000, bbox_inches="tight")
-    #plt.show()
-    plt.clf()
+    if folder is None:
+        plt.show()
+    else:
+        filename = folder + '/consistency_' + type + '.pdf'
+        plt.savefig(filename, dpi=1000, bbox_inches="tight")
+        plt.clf()
 
 # # # ABSTENTION # # #
 
-def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_name='Statistical Parity', folder='figure'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
+def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_name, folder=None):
+    num_datasets = len(datasets)
+    fig, axs = plt.subplots(1, num_datasets, figsize=(4 * num_datasets, 3))
 
     for i, dataset in enumerate(datasets):
         instance = results[dataset]['instance']
@@ -104,15 +111,18 @@ def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_
         axs[i].set_xlabel('Abstention Rate')
 
     plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=4)
-    filename = f'{folder}/abstention_{metric_name}.pdf'
-    plt.savefig(filename, dpi=1000, bbox_inches="tight")
-    #plt.show()
-    plt.clf()
+    if folder is None:
+        plt.show()
+    else:
+        filename = f'{folder}/abstention_{metric_name}.pdf'
+        plt.savefig(filename, dpi=1000, bbox_inches="tight")
+        plt.clf()
 
 # # # REGRESSION FAIRNESS # # #
 
-def plot_regression_fairness(results, datasets, algorithms, folder='figures'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
+def plot_regression_fairness(results, datasets, algorithms, folder=None):
+    num_datasets = len(datasets)
+    fig, axs = plt.subplots(1, num_datasets, figsize=(4 * num_datasets, 3))
 
     for dataset_num, dataset in enumerate(datasets):
         instance = results[dataset]['instance']
@@ -135,6 +145,8 @@ def plot_regression_fairness(results, datasets, algorithms, folder='figures'):
             axs[dataset_num].set_ylabel('CDF')
 
     plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=len(algorithms))
-    plt.savefig(f'{folder}/regression_fairness.pdf', dpi=1000, bbox_inches='tight')
-    #plt.show()
-    plt.clf()
+    if folder is None:
+        plt.show()
+    else:
+        plt.savefig(f'{folder}/regression_fairness.pdf', dpi=1000, bbox_inches='tight')
+        plt.clf()
