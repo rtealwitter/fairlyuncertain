@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="fairlyuncertain",
-    version="0.0.1",
+    version="0.0.2",
     author="R. Teal Witter and Lucas Rosenblatt",
     author_email="rtealwitter@gmail.com, lr2872@nyu.edu",
     description="Heteroscedastic uncertainty estimates for fair algorithms.",
