@@ -2,17 +2,6 @@
 
 FairlyUncertain is a Python library for evaluating fairness and uncertainty in machine learning models. 
 
-## Table of Contents
-- [FairlyUncertain Documentation](#fairlyuncertain-documentation)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Code Demonstration](#code-demonstration)
-  - [Codebase Structure](#codebase-structure)
-  - [How to Add a New Dataset](#how-to-add-a-new-dataset)
-  - [How to Add a New Method](#how-to-add-a-new-method)
-  - [License](#license)
-  - [Citation](#citation)
-
 ## Installation
 
 To install FairlyUncertain, you can use pip:
