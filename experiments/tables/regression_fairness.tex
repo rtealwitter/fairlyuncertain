@@ -1,14 +1,15 @@
-\begin{tabular} {|l|c|c|c|c|c|}
-\hline
-\textbf{Algorithm} & \textbf{Communities} & \textbf{IHDP} & \textbf{Insurance} & \textbf{Law School} & \textbf{Twins} \\ \hline
-True & 0.56 (0.04) & 0.15 (0.06) & 0.1 (0.02) & 0.48 (0.02) & 0.16 (0.01) \\ \hline 
-Baseline & 0.64 (0.03) & 0.14 (0.05) & 0.09 (0.02) & 0.96 (0.01) & 0.4 (0.01) \\ \hline 
-EG Square & 0.64 (0.02) & 0.16 (0.05) & 0.09 (0.03) & 0.9 (0.01) & 0.36 (0.01) \\ \hline 
-EG Absolute & 0.64 (0.02) & 0.16 (0.06) & 0.09 (0.03) & 0.9 (0.01) & 0.36 (0.01) \\ \hline 
-GS Square & 0.65 (0.04) & 0.17 (0.06) & 0.09 (0.03) & 0.89 (0.02) & 0.36 (0.01) \\ \hline 
-GS Absolute & 0.65 (0.04) & 0.17 (0.06) & 0.09 (0.02) & 0.89 (0.02) & 0.36 (0.01) \\ \hline 
-Ensemble & 0.62 (0.02) & 0.1 (0.05) & 0.08 (0.02) & 0.94 (0.01) & 0.39 (0.01) \\ \hline 
-Normal NLL & \textbf{\underline{0.37}} (0.02) & \textbf{\textit{0.05}} (0.03) & \textbf{0.05} (0.02) & \textbf{\underline{0.2}} (0.0) & \textbf{0.1} (0.0) \\ \hline 
-$\beta$-NLL & \textbf{\textit{0.38}} (0.02) & \textbf{0.04} (0.03) & \textbf{0.05} (0.02) & \textbf{\underline{0.2}} (0.0) & \textbf{0.1} (0.0) \\ \hline 
-Faithful NLL & \textbf{0.3} (0.15) & \textbf{0.04} (0.02) & \textbf{0.05} (0.02) & \textbf{0.19} (0.0) & \textbf{0.1} (0.0) \\ \hline 
+\begin{tabular} {lccccc}
+\toprule
+\textbf{Approach} & \textbf{Communities} & \textbf{IHDP} & \textbf{Insurance} & \textbf{Law School} & \textbf{Twins} \\ \midrule
+True & 0.561 $\pm$ 0.036 & 0.153 $\pm$ 0.061 & 0.1 $\pm$ 0.022 & 0.484 $\pm$ 0.021 & 0.161 $\pm$ 0.011 \\ 
+Baseline & 0.644 $\pm$ 0.025 & 0.144 $\pm$ 0.05 & 0.091 $\pm$ 0.019 & 0.965 $\pm$ 0.009 & 0.404 $\pm$ 0.009 \\ 
+Exponentiated Gradient Square & 0.638 $\pm$ 0.024 & 0.16 $\pm$ 0.053 & 0.094 $\pm$ 0.025 & 0.902 $\pm$ 0.015 & 0.357 $\pm$ 0.01 \\ 
+Exponentiated Gradient Absolute & 0.638 $\pm$ 0.024 & 0.157 $\pm$ 0.057 & 0.094 $\pm$ 0.025 & 0.902 $\pm$ 0.015 & 0.359 $\pm$ 0.009 \\ 
+Grid Search Square & 0.649 $\pm$ 0.035 & 0.167 $\pm$ 0.056 & 0.093 $\pm$ 0.025 & 0.888 $\pm$ 0.019 & 0.357 $\pm$ 0.007 \\ 
+Grid Search Absolute & 0.649 $\pm$ 0.035 & 0.167 $\pm$ 0.056 & 0.092 $\pm$ 0.024 & 0.888 $\pm$ 0.019 & 0.358 $\pm$ 0.007 \\ 
+Ensemble & 0.62 $\pm$ 0.021 & 0.101 $\pm$ 0.052 & 0.076 $\pm$ 0.022 & 0.939 $\pm$ 0.008 & 0.389 $\pm$ 0.009 \\ 
+Normal NLL & \cellcolor{silver!30}0.37 $\pm$ 0.016 & \cellcolor{bronze!30}0.048 $\pm$ 0.028 & \cellcolor{silver!30}0.052 $\pm$ 0.022 & \cellcolor{bronze!30}0.196 $\pm$ 0.003 & \cellcolor{silver!30}0.096 $\pm$ 0.002 \\ 
+$\beta$-NLL & \cellcolor{bronze!30}0.375 $\pm$ 0.019 & \cellcolor{silver!30}0.045 $\pm$ 0.025 & \cellcolor{gold!30}0.051 $\pm$ 0.022 & \cellcolor{silver!30}0.195 $\pm$ 0.004 & \cellcolor{silver!30}0.096 $\pm$ 0.003 \\ 
+Faithful NLL & \cellcolor{gold!30}0.299 $\pm$ 0.151 & \cellcolor{gold!30}0.042 $\pm$ 0.021 & \cellcolor{bronze!30}0.054 $\pm$ 0.02 & \cellcolor{gold!30}0.192 $\pm$ 0.004 & \cellcolor{gold!30}0.095 $\pm$ 0.003 \\ 
+\bottomrule
 \end{tabular}

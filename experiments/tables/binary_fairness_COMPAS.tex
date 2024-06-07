@@ -1,16 +1,17 @@
-\begin{tabular} {|l|c|c|c|c|}
-\hline
-\textbf{Algorithm} & \textbf{Error Rate} & \textbf{Statistical Parity} & \textbf{Equalized Odds} & \textbf{Included \%} \\ \hline
-Baseline & 0.316 (0.00949) & 0.196 (0.0218) & 0.187 (0.0315) & \textbf{100.} (0.00) \\ \hline 
-Threshold Optimizer SP & 0.346 (0.00828) & \textbf{0.0253} (0.017) & 0.087 (0.0327) & \textbf{100.} (0.00) \\ \hline 
-Threshold Optimizer EO & 0.351 (0.0114) & \textbf{\textit{0.0589}} (0.0254) & \textbf{0.0602} (0.0307) & \textbf{100.} (0.00) \\ \hline 
-Exponentiated Gradient SP & 0.325 (0.0102) & \textbf{\underline{0.0359}} (0.0285) & \textbf{\textit{0.0716}} (0.0227) & \textbf{100.} (0.00) \\ \hline 
-Exponentiated Gradient EO & 0.33 (0.0101) & 0.0823 (0.0257) & \textbf{\underline{0.0681}} (0.0343) & \textbf{100.} (0.00) \\ \hline 
-Grid Search SP & 0.327 (0.0103) & 0.0858 (0.0853) & 0.143 (0.0571) & \textbf{100.} (0.00) \\ \hline 
-Grid Search EO & 0.323 (0.00856) & 0.219 (0.0239) & 0.217 (0.0348) & \textbf{100.} (0.00) \\ \hline 
-Random & 0.312 (0.00953) & 0.184 (0.0233) & 0.176 (0.0291) & 85.8 (8.87) \\ \hline 
-Ensemble & 0.307 (0.0101) & 0.185 (0.0246) & 0.183 (0.0428) & 89.7 (8.80) \\ \hline 
-Selective Ensemble & \textbf{0.295} (0.0233) & 0.203 (0.0355) & 0.201 (0.0417) & 90.8 (9.55) \\ \hline 
-Self-(in)consistency & \textbf{\underline{0.305}} (0.0154) & 0.197 (0.0307) & 0.189 (0.0441) & 94.4 (7.39) \\ \hline 
-Binomial NLL & \textbf{\textit{0.306}} (0.0205) & 0.191 (0.0224) & 0.176 (0.0344) & 95.0 (8.56) \\ \hline 
+\begin{tabular} {lcccc}
+\toprule
+\textbf{Approach} & \textbf{Error Rate} & \textbf{Statistical Parity} & \textbf{Equalized Odds} & \textbf{Included \%} \\ \midrule
+Baseline & 0.316 $\pm$ 0.009 & 0.196 $\pm$ 0.022 & 0.187 $\pm$ 0.032 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Threshold Optimizer SP & 0.346 $\pm$ 0.008 & \cellcolor{gold!30}0.025 $\pm$ 0.017 & 0.087 $\pm$ 0.033 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Threshold Optimizer EO & 0.351 $\pm$ 0.011 & \cellcolor{bronze!30}0.059 $\pm$ 0.025 & \cellcolor{gold!30}0.06 $\pm$ 0.031 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Exponentiated Gradient SP & 0.325 $\pm$ 0.01 & \cellcolor{silver!30}0.036 $\pm$ 0.029 & \cellcolor{bronze!30}0.072 $\pm$ 0.023 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Exponentiated Gradient EO & 0.33 $\pm$ 0.01 & 0.082 $\pm$ 0.026 & \cellcolor{silver!30}0.068 $\pm$ 0.034 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Grid Search SP & 0.327 $\pm$ 0.01 & 0.086 $\pm$ 0.085 & 0.143 $\pm$ 0.057 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Grid Search EO & 0.323 $\pm$ 0.009 & 0.219 $\pm$ 0.024 & 0.217 $\pm$ 0.035 & \cellcolor{gold!30}100.0 $\pm$ 0.0 \\ 
+Random & 0.312 $\pm$ 0.01 & 0.184 $\pm$ 0.023 & 0.176 $\pm$ 0.029 & 85.8 $\pm$ 8.87 \\ 
+Ensemble & 0.307 $\pm$ 0.01 & 0.185 $\pm$ 0.025 & 0.183 $\pm$ 0.043 & 89.7 $\pm$ 8.8 \\ 
+Selective Ensemble & \cellcolor{gold!30}0.295 $\pm$ 0.023 & 0.203 $\pm$ 0.035 & 0.201 $\pm$ 0.042 & 90.8 $\pm$ 9.55 \\ 
+Self-(in)consistency & \cellcolor{silver!30}0.305 $\pm$ 0.015 & 0.197 $\pm$ 0.031 & 0.189 $\pm$ 0.044 & 94.4 $\pm$ 7.39 \\ 
+Binomial NLL & \cellcolor{bronze!30}0.306 $\pm$ 0.021 & 0.191 $\pm$ 0.022 & 0.176 $\pm$ 0.034 & 95.0 $\pm$ 8.56 \\ 
+\bottomrule
 \end{tabular}

@@ -1,6 +1,3 @@
-import os
-# Add the path to the parent directory to augment search for module
-os.sys.path.append(os.path.dirname(os.path.abspath('.')))
 import fairlyuncertain as fu
 
 for is_binary in [True, False]:

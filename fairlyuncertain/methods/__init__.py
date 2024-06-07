@@ -9,6 +9,7 @@ from .binomial_nll import binomial_nll
 from .regression_nll import normal_nll, beta_nll, faithful_nll
 from .threshold import threshold_sp, threshold_eo
 from .reductions import gridsearch, exponentiated_gradient, moments
+from .ft_transformer import FTTransformerModel
 
 # # # # BINARY AND REGRESSION # # # #
 

@@ -10,3 +10,4 @@ binary_fairness_German.pkl
 __pycache__
 dist
 fairlyuncertain.egg-info
+cached/

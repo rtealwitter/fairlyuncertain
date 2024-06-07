@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from .utils import compute_cdf
 
-plt.rcParams.update({'font.size': 14})
+plt.rcParams.update({'font.size': 16})
 
 linestyles = ['-', '--', '-.', ':', (0, (3, 5, 1, 5)), (1, (3, 5, 1, 5)), (2, (3, 5, 1, 5))]
 
@@ -10,7 +10,7 @@ linestyles = ['-', '--', '-.', ':', (0, (3, 5, 1, 5)), (1, (3, 5, 1, 5)), (2, (3
 # # # CALIBRATION # # #
 
 def plot_calibration(results, is_binary, algorithms, datasets, folder='figures'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 4))
+    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
 
     markers = ['o', 's', 'v', 'D', 'P', 'X', 'H']
 
@@ -21,10 +21,10 @@ def plot_calibration(results, is_binary, algorithms, datasets, folder='figures')
             std = results[dataset][algo_name]['std']
             if not is_binary:
                 mean = results[dataset][algo_name]['pred']
-            sigma_bins = np.linspace(np.percentile(std, 0), np.percentile(std, 100), 100)
+            sigma_bins = np.linspace(np.percentile(std, 0), np.percentile(std, 100), 10)
             pred_std, empirical_std = [], []
             for k in range(len(sigma_bins)-1):
-                criteria = (std >= sigma_bins[i]) & (std < sigma_bins[k+1])
+                criteria = (std >= sigma_bins[k]) & (std < sigma_bins[k+1])
                 if np.sum(criteria) < 20: continue
                 pred_std.append(np.mean(std[criteria]))
                 if not is_binary:
@@ -47,7 +47,7 @@ def plot_calibration(results, is_binary, algorithms, datasets, folder='figures')
         axs[i].tick_params(axis='both', which='major', labelsize=10)
         #else: axs[i].set_yticklabels([])
 
-    bbox_to_anchor = (-1.7,-.2) if is_binary else (-2,-.2)
+    bbox_to_anchor = (1,-.2) if is_binary else (1,-.2)
     plt.legend(fancybox=True, bbox_to_anchor=bbox_to_anchor, ncol=4)
 
     type = 'binary' if is_binary else 'regression'
@@ -59,12 +59,12 @@ def plot_calibration(results, is_binary, algorithms, datasets, folder='figures')
 # # # CONSISTENCY # # #
 
 def plot_consistency(results, is_binary, algorithms, datasets, folder='figures', idx=42):
-    fig, axs = plt.subplots(1, 5, figsize=(20, 4))    
+    fig, axs = plt.subplots(1, 5, figsize=(20, 3))    
 
     for i, dataset in enumerate(datasets):
         max_depths = sorted(results[dataset][list(algorithms.keys())[0]].keys())
         for j, name in enumerate(algorithms.keys()):
-            std= np.array([results[dataset][name][max_depth][idx] for max_depth in max_depths])
+            std= np.array([results[dataset][name][max_depth][0][idx] for max_depth in max_depths])
             axs[i].plot(max_depths, std, label=name, linestyle=linestyles[j], linewidth=5)
         if i == 0: axs[i].set_ylabel('Uncertainty')
 
@@ -72,7 +72,7 @@ def plot_consistency(results, is_binary, algorithms, datasets, folder='figures',
         axs[i].set_xlabel('Depth')
         axs[i].set_title(dataset)
 
-    plt.legend(fancybox=True, bbox_to_anchor=(-1.3,-.2), ncol=4)
+    plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=4)
     type = 'binary' if is_binary else 'regression'
     filename = folder + '/consistency_' + type + '.pdf'
     plt.savefig(filename, dpi=1000, bbox_inches="tight")
@@ -82,7 +82,7 @@ def plot_consistency(results, is_binary, algorithms, datasets, folder='figures',
 # # # ABSTENTION # # #
 
 def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_name='Statistical Parity', folder='figure'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 4))
+    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
 
     for i, dataset in enumerate(datasets):
         instance = results[dataset]['instance']
@@ -103,7 +103,7 @@ def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_
         axs[i].set_title(dataset)
         axs[i].set_xlabel('Abstention Rate')
 
-    plt.legend(fancybox=True, bbox_to_anchor=(-1.2,-.2), ncol=4)
+    plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=4)
     filename = f'{folder}/abstention_{metric_name}.pdf'
     plt.savefig(filename, dpi=1000, bbox_inches="tight")
     #plt.show()
@@ -112,7 +112,7 @@ def plot_abstention(results, algorithms, datasets, percentiles, metrics, metric_
 # # # REGRESSION FAIRNESS # # #
 
 def plot_regression_fairness(results, datasets, algorithms, folder='figures'):
-    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 4))
+    fig, axs = plt.subplots(1, len(datasets), figsize=(20, 3))
 
     for dataset_num, dataset in enumerate(datasets):
         instance = results[dataset]['instance']
@@ -134,7 +134,7 @@ def plot_regression_fairness(results, datasets, algorithms, folder='figures'):
         if dataset_num == 0:
             axs[dataset_num].set_ylabel('CDF')
 
-    plt.legend(fancybox=True, bbox_to_anchor=(0.8,-.2), ncol=len(algorithms))
+    plt.legend(fancybox=True, bbox_to_anchor=(1,-.2), ncol=len(algorithms))
     plt.savefig(f'{folder}/regression_fairness.pdf', dpi=1000, bbox_inches='tight')
     #plt.show()
     plt.clf()

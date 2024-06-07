@@ -1,6 +1,3 @@
-import os
-# Add the path to the parent directory to augment search for module
-os.sys.path.append(os.path.dirname(os.path.abspath('.')))
 import fairlyuncertain as fu
 
 for is_binary in [True, False]:
@@ -13,4 +10,4 @@ for is_binary in [True, False]:
 
     type = 'binary' if is_binary else 'regression'
     filename = f'tables/nll_{type}.tex'
-    fu.print_table(results, filename=filename, is_constrained=True, is_very_constrained=True)
+    fu.print_table(results, filename=filename)

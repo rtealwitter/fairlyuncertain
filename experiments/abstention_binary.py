@@ -1,8 +1,5 @@
 from tqdm import tqdm
-import os
 import numpy as np
-# Add the path to the parent directory to augment search for module
-os.sys.path.append(os.path.dirname(os.path.abspath('.')))
 import fairlyuncertain as fu
 
 

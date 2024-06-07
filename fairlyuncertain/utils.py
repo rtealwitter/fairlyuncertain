@@ -7,65 +7,66 @@ import warnings
 def fancy_round(x, precision=3):
     return float(np.format_float_positional(x, precision=precision, unique=False, fractional=False, trim='k'))
 
-def print_table(results_all, filename, is_constrained=False, include_var=True, is_very_constrained=False):
-    f = open(filename, 'w')
-    col_types = '|l|' + 'c|'*len(results_all.keys())
+def print_table(results_all, filename, include_var=True, lower_is_better=True):
+    with open(filename, 'w') as f:
+        col_types = 'l' + 'c' * len(results_all.keys())
 
-    f.write('\\begin{tabular} {' + col_types + '}\n')
-    f.write('\\hline\n')
+        f.write('\\begin{tabular} {' + col_types + '}\n')
+        f.write('\\toprule\n')
 
-    col_names = ['Algorithm'] + list(results_all.keys())
-    col_names_bold = ['\\textbf{' + col_name + '}' for col_name in col_names]
+        col_names = ['Approach'] + list(results_all.keys())
+        col_names_bold = ['\\textbf{' + col_name + '}' for col_name in col_names]
 
-    f.write(' & '.join(col_names_bold) + ' \\\\ \\hline\n')
+        f.write(' & '.join(col_names_bold) + ' \\\\ \\midrule\n')
 
-    current_round = lambda x : fancy_round(x, 3)
-    if is_constrained:
-        current_round = lambda x : round(fancy_round(x, 2), 3)
-    if is_very_constrained:
-        current_round = lambda x : round(fancy_round(x, 2), 2)
-    
-    mean_cols = {}
-    for dataset in results_all:
-        mean_col = []
-        for algo_name in results_all[dataset]:
-            mean_col.append(current_round(np.mean(results_all[dataset][algo_name])))
-        mean_col_sorted = sorted(mean_col)
-        mean_cols[dataset] = mean_col_sorted
-    
-    first_key = list(results_all.keys())[0]
-
-    for algo_name in results_all[first_key]:
-        to_print = [algo_name]
+        current_round = lambda x: round(fancy_round(x, 3), 3)
+        
+        mean_cols = {}
         for dataset in results_all:
-            mean_val = current_round(np.mean(results_all[dataset][algo_name]))
-            std_val = current_round(np.std(results_all[dataset][algo_name]))
-            if mean_val == mean_cols[dataset][0]:
-                mean_val = '\\textbf{' + str(mean_val) + '}'
-            elif mean_val == mean_cols[dataset][1]:
-                mean_val = '\\textbf{\\underline{' + str(mean_val) + '}}'
-            elif mean_val == mean_cols[dataset][2]:
-                mean_val = '\\textbf{\\textit{' + str(mean_val) + '}}'
-            if include_var:
-                to_print.append(f'{mean_val} ({std_val})')
-            else:
-                to_print.append(str(mean_val))
-        if is_very_constrained:
-            to_print[0] = algo_name.replace('Exponentiated Gradient', 'EG').replace('Grid Search', 'GS')
+            mean_col = []
+            for algo_name in results_all[dataset]:
+                mean_col.append(current_round(np.mean(results_all[dataset][algo_name])))
+            if 'Included' in dataset:
+                lower_is_better = not lower_is_better
+            mean_col_sorted = sorted(mean_col, reverse=not lower_is_better)
+            mean_cols[dataset] = mean_col_sorted
 
-        f.write(' & '.join(to_print) + ' \\\\ \\hline \n')
-    
-    f.write('\\end{tabular}')
+        first_key = list(results_all.keys())[0]
+
+        for algo_name in results_all[first_key]:
+            to_print = [algo_name]
+            for dataset in results_all:
+                mean_val = current_round(np.mean(results_all[dataset][algo_name]))
+                std_val = current_round(np.std(results_all[dataset][algo_name]))
+                color = ''
+                if mean_val == mean_cols[dataset][0]:
+                    color = '\\cellcolor{gold!30}'
+                elif mean_val == mean_cols[dataset][1]:
+                    color = '\\cellcolor{silver!30}'
+                elif mean_val == mean_cols[dataset][2]:
+                    color = '\\cellcolor{bronze!30}'              
+                mean_val_str = f'{color}{mean_val}'
+                
+                if include_var:
+                    to_print.append(f'{mean_val_str} $\\pm$ {std_val}')
+                else:
+                    to_print.append(mean_val_str)
+
+            f.write(' & '.join(to_print) + ' \\\\ \n')
+
+        f.write('\\bottomrule\n')
+        f.write('\\end{tabular}\n')
 
 def get_consistency_table(results, datasets, algorithms):
     table = {}
     for dataset in datasets:
-        table[dataset] = {}
-        max_depths = sorted(results[dataset][list(algorithms.keys())[0]].keys())
-        for i, algo_name in enumerate(algorithms.keys()):
-            std = np.array([results[dataset][algo_name][max_depth] for max_depth in max_depths])
-            max_std = (np.std(std, axis=0)).max()
-            table[dataset][algo_name] = max_std
+        table[dataset] = {algo_name : [] for algo_name in algorithms}
+        for algo_name in algorithms.keys():            
+            max_depths = sorted(results[dataset][algo_name].keys())
+            for i in range(len(results[dataset][algo_name][max_depths[0]])):
+                std = np.array([results[dataset][algo_name][max_depth][i] for max_depth in max_depths])
+                max_std = (np.std(std, axis=0)).max()
+                table[dataset][algo_name].append(max_std)
     
     return table
 

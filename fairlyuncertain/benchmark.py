@@ -64,19 +64,19 @@ def load_consistency_results(filename, algorithms):
             max_depth = saved['max_depth']
             for name in saved:
                 if name == 'max_depth': continue
-                results[name][max_depth] = saved[name]
+                if max_depth not in results[name]:
+                    results[name][max_depth] = []
+                results[name][max_depth] += [saved[name]]
     return results
 
 def get_consistency_data(dataset, algorithms, max_depths):
     filename = f'cached/consistency_{dataset}.csv'
     instance = load_instance(dataset)
-    results = load_consistency_results(filename, algorithms)
     for max_depth in max_depths:
         
         instance['max_depth'] = max_depth
         saved = {'max_depth': max_depth}
         for algo_name, algorithm in algorithms.items():
-            if max_depth in results[algo_name]: continue
             output = algorithm(instance)
             saved[algo_name] = list(output['std'])
         if len(saved) > 1:
