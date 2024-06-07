@@ -12,7 +12,7 @@ pip install fairlyuncertain
 
 ## Code Demonstration
 
-We have created a Python notebook for demonstrating some of the core features of FairlyUncertain. You can find the notebook [here](https://colab.research.google.com/drive/1YJrT-EMe7DOan3jsusHLRpSl-r32Gvy9?usp=sharing) or in the `experiments` folder in the `demo.ipynb` file.
+We have created a Python notebook for demonstrating some of the core features of FairlyUncertain. The demo is available in [`demo.ipynb`](demo.ipynb).
 
 In addition, we have provided all of the code and results for the accompanying paper in the `experiments` folder.
 
